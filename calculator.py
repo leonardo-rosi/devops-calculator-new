@@ -1,8 +1,8 @@
-from operations import add, subtract, multiply, divide
+from operations import sum, subtract, multiply, divide
 
 def calculate(operation: str, a: float, b: float) -> float:
-    if operation == "add":
-        return add(a, b)
+    if operation == "sum":
+        return sum(a, b)
     elif operation == "subtract":
         return subtract(a, b)
     elif operation == "multiply":
@@ -14,12 +14,12 @@ def calculate(operation: str, a: float, b: float) -> float:
     
 # Example usage:
 if __name__ == "__main__":
-    print(calculate("add", 5, 3))        # Output: 8
+    print(calculate("sum", 5, 3))        # Output: 8
     print(calculate("subtract", 5, 3))   # Output: 2
     print(calculate("multiply", 5, 3))   # Output: 15
     print(calculate("divide", 6, 3))     # Output: 2.0
     x = input("Enter first number: ")
     y = input("Enter second number: ")
-    print("Sum of ", x, " and ", y, " is ", calculate("add", float(x), float(y)))
+    print("Sum of ", x, " and ", y, " is ", calculate("sum", float(x), float(y)))
     print("Difference of ", x, " and ", y, " is ", calculate("subtract", float(x), float(y)))
-    
+
